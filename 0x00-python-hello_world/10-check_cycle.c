@@ -11,17 +11,17 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *ptr;
+	listint_t *slow_ptr = list;
+	listint_t *fast_ptr = list;
 
 	if (!list)
 		return (0);
 
-	ptr = list;
-
-	while (ptr->next != NULL)
+	while (fast_ptr != NULL && fast_ptr->next != NULL)
 	{
-		ptr = ptr->next;
-		if (ptr == list)
+		slow_ptr = slow_ptr->next;
+		fast_ptr = fast_ptr->next->next;
+		if (slow_ptr == fast_ptr)
 			return (1);
 	}
 	return (0);
