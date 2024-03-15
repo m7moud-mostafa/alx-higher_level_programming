@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    rows = len(matrix)
-    cols = len(matrix[0])
     i = 0
 
     for row in matrix:
@@ -11,5 +9,6 @@ def print_matrix_integer(matrix=[[]]):
                 print("{}".format(col), end=" ")
                 j += 1
             else:
-                print("{}".format(col))
+                print("{}".format(col), end="")
+        print("")
         i += 1
