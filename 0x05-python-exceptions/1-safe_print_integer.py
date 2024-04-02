@@ -8,6 +8,7 @@ def safe_print_integer(value):
     except ValueError:
         print("{} is not an integer".format(value))
         is_integer = False
+    return is_integer
 
 
 if __name__ == "__main__":
