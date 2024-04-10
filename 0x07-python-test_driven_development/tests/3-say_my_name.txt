@@ -1,3 +1,4 @@
+# Import the say my name function from the module
 >>> say_my_name = __import__('3-say_my_name').say_my_name
 
 # Test with both first and last names

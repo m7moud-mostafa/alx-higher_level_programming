@@ -1,0 +1,24 @@
+# Import the print square function from the module
+>>> print_square = __import__('4-print_square').print_square
+
+# Test with size = 3
+>>> print_square(3)
+###
+###
+###
+
+# Test with size = 0 (should print nothing)
+>>> print_square(0)
+
+
+# Test with negative size, should raise ValueError
+>>> print_square(-3)
+Traceback (most recent call last):
+    ...
+ValueError: size must be >= 0
+
+# Test with non-integer size, should raise TypeError
+>>> print_square("3")
+Traceback (most recent call last):
+    ...
+TypeError: size must be an integer
