@@ -1,0 +1,21 @@
+# Importing the text text_indentation function from the module
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+# Test with standard text
+>>> text_indentation("Hello. How are you? Fine, thank you.")
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+Fine, thank you.
+<BLANKLINE>
+
+# Test with non-string, should raise TypeError
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+# Test with no punctuation
+>>> text_indentation("Hello World")
+Hello World
