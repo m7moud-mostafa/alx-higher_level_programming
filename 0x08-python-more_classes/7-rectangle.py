@@ -88,7 +88,7 @@ if __name__ == "__main__":
     print(my_rectangle_1)
     print("--")
     my_rectangle_1.print_symbol = "&"
-    
+
     print(my_rectangle_1)
     print("--")
 
