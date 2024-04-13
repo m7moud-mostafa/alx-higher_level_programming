@@ -17,6 +17,7 @@ class Rectangle:
         """Initialize the Class"""
         self.width = width
         self.height = height
+        self.print_symbol = Rectangle.print_symbol
         Rectangle.number_of_instances += 1
 
     @property
@@ -64,7 +65,7 @@ class Rectangle:
             return string
         for i in range(self.__height):
             for j in range(self.__width):
-                string += Rectangle.print_symbol
+                string += str(self.print_symbol)
             string += "\n"
         return string[:-1]
 
@@ -87,6 +88,7 @@ if __name__ == "__main__":
     print(my_rectangle_1)
     print("--")
     my_rectangle_1.print_symbol = "&"
+    
     print(my_rectangle_1)
     print("--")
 
