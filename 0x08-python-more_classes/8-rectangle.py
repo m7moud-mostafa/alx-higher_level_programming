@@ -82,7 +82,7 @@ class Rectangle:
         Rectangle.number_of_instances -= 1
 
     @staticmethod
-    def bigger_or_equal(cls, rect_1, rect_2):
+    def bigger_or_equal(rect_1, rect_2):
         """Returns the biggest rectangle"""
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
