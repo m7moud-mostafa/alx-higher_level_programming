@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module contains many functions
+"""
+
+
 class MyList(list):
     """
     MyList that inherits from list and can print sorted list.

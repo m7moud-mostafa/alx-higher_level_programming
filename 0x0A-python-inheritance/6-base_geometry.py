@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module contains many functions
+"""
+
+
 class BaseGeometry:
     """
     Class BaseGeometry with public instance method.

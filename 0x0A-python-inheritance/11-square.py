@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module contains many functions
+"""
+
+
 from 9-rectangle import Rectangle
 
 class Square(Rectangle):

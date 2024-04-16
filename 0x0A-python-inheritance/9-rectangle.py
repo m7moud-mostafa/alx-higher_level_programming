@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+This module contains many functions
+"""
+
+
 from 7-base_geometry import BaseGeometry
 
 class Rectangle(BaseGeometry):
