@@ -11,4 +11,4 @@ def write_file(filename="", text=""):
 
 
 if __name__ == "__main__":
-	print(write_file("my_first_file.txt", "This School is so cool!\n"))
+    print(write_file("my_first_file.txt", "This School is so cool!\n"))
