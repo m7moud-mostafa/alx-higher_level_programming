@@ -6,7 +6,7 @@ This is an important module
 
 def write_file(filename="", text=""):
     """reads a file"""
-    with open(filename,mode="w", encoding="utf-8") as file:
+    with open(filename, mode="w", encoding="utf-8") as file:
         return file.write(text)
 
 
