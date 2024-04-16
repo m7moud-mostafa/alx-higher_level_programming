@@ -4,8 +4,7 @@ This module contains many functions
 """
 
 
-from 9-rectangle import Rectangle
-
+Rectangle = __import__("9-rectangle").Rectangle
 class Square(Rectangle):
     """
     Class Square that inherits from Rectangle. Redefines str() to return square-specific description.
