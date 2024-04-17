@@ -21,6 +21,6 @@ class Student:
         for key in attrs:
             try:
                 dic[key] = self.__dict__[key]
-            except KeyError:
+            except Exception as e:
                 pass
         return dic
