@@ -7,8 +7,7 @@ class Student:
     """
     Student Class contains the student name and age
     """
-
-    def  __init__(self, first_name, last_name, age):
+    def __init__(self, first_name, last_name, age):
         """Initializing the class"""
         self.first_name = first_name
         self.last_name = last_name
