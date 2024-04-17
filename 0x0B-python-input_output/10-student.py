@@ -19,5 +19,8 @@ class Student:
             return self.__dict__
         dic = {}
         for key in attrs:
-            dic[key] = self.__dict__[key]
+            try:
+                dic[key] = self.__dict__[key]
+            except KeyError:
+                pass
         return dic
