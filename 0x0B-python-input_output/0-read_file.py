@@ -11,4 +11,7 @@ def read_file(filename=""):
 
 
 if __name__ == "__main__":
-    read_file("README.md")
+    with open("my_first_file.txt", "r", encoding="utf-8") as f:
+        print(f.readline(), end="")
+        print(f.readline(), end="")
+        print(f.readlines())
