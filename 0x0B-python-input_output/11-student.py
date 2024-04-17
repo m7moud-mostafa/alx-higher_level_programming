@@ -35,4 +35,3 @@ class Student:
                 self.last_name = json["last_name"]
             if "age" in json.keys():
                 self.age = json["age"]
-
