@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-
+"""
+This script creates a JSON file and adds a list
+of arguments to it
+"""
 
 if __name__ == "__main__":
     import sys
@@ -11,7 +14,7 @@ if __name__ == "__main__":
 
     try:
         json_list = load_from_json_file(file_name)
-    except:
+    except Exception as e:
         json_list = []
 
     arg_list = sys.argv[1:]
