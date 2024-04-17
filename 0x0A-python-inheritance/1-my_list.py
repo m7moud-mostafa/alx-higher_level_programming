@@ -1,15 +1,7 @@
 #!/usr/bin/python3
-"""
-This module contains many functions
-"""
-
-
-class MyList(list):
-    """
-    MyList that inherits from list and can print sorted list.
-    """
-    def print_sorted(self):
-        """
-        Prints the list, but sorted in ascending order.
-        """
-        print(sorted(self))
+def element_at(my_list, idx):
+    if idx < 0:
+        return None
+    if idx > len(my_list) - 1:
+        return None
+    return my_list[idx]
