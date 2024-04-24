@@ -1,22 +1,27 @@
-# Import the say my name function from the module
->>> say_my_name = __import__('3-say_my_name').say_my_name
+Test file for ``3-say_my_name.py`` module
+==========================================
 
-# Test with both first and last names
->>> say_my_name("John", "Doe")
-My name is John Doe
+>>> say_my_name = __import__("3-say_my_name").say_my_name
+>>> say_my_name("mahmoud", "mostafa")
+My name is mahmoud mostafa
 
-# Test with only first name
->>> say_my_name("Alice")
-My name is Alice 
-
-# Test with non-string first name, should raise TypeError
->>> say_my_name(123, "Doe")
+>>> say_my_name(5, "mostafa")
 Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
 
-# Test with non-string last name, should raise TypeError
->>> say_my_name("John", 456)
+>>> say_my_name("mostafa", 5)
 Traceback (most recent call last):
     ...
 TypeError: last_name must be a string
+
+>>> say_my_name(None , 5)
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+>>> say_my_name("" , None)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+mygit 
