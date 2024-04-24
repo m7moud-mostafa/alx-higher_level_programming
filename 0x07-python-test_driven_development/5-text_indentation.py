@@ -20,7 +20,3 @@ def text_indentation(text):
 		else:
 			print(text[char], end='')
 			char += 1
-
-if __name__ == "__main__":
-	text = """my name is mahmoud mostafa.to day i have many questions about how things works. can you help? i need to kill my self and here is why: i hate life. i hope i can die"""
-	text_indentation(text)
