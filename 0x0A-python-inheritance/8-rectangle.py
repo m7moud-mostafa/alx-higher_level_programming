@@ -1,18 +1,15 @@
 #!/usr/bin/python3
-"""
-This module contains many functions
-"""
+"""This module contains the Rectangle class"""
 
 
 BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
+
 class Rectangle(BaseGeometry):
-    """
-    Class Rectangle that inherits from BaseGeometry.
-    """
+    """This class for Rectangle shape"""
+
     def __init__(self, width, height):
-        """
-        Instantiates with width and height.
-        """
+        """Initializing the class"""
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
