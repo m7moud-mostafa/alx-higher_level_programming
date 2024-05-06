@@ -11,7 +11,14 @@ class MyList(list):
         self.list_.sort()
         print(self.list_)
 
-my_list = MyList()
-print(my_list)
-my_list.print_sorted()
-print(my_list)
+
+if __name__ == "__main__":
+    my_list = MyList()
+    my_list.append(-49)
+    my_list.append(5)
+    my_list.append(-4)
+    my_list.append(4)
+    my_list.append(50)
+    print(my_list)
+    my_list.print_sorted()
+    print(my_list)
