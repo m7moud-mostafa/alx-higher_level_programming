@@ -1,32 +1,31 @@
 #!/usr/bin/python3
-"""
-This module contains many functions
-"""
+"""This module contains the Rectangle class"""
 
 
-from 7-base_geometry import BaseGeometry
+BaseGeometry = __import__("7-base_geometry").BaseGeometry
+
 
 class Rectangle(BaseGeometry):
-    """
-    Class Rectangle that inherits from BaseGeometry.
-    """
+    """This class for Rectangle shape"""
+
     def __init__(self, width, height):
-        """
-        Instantiates with width and height.
-        """
+        """Initializing the class"""
         self.integer_validator("width", width)
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
 
     def area(self):
-        """
-        Returns the area of the rectangle.
-        """
+        """Calculates the area"""
         return self.__width * self.__height
 
     def __str__(self):
-        """
-        Returns the rectangle description.
-        """
-        return f"[Rectangle] {self.__width}/{self.__height}"
+        """Returns a description of an object"""
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
+
+if __name__ == "__main__":
+    r = Rectangle(3, 5)
+
+    print(r)
+    print(r.area())
