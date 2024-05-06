@@ -10,3 +10,8 @@ class MyList(list):
         self.list_ = self.copy()
         self.list_.sort()
         print(self.list_)
+
+my_list = MyList()
+print(my_list)
+my_list.print_sorted()
+print(my_list)
