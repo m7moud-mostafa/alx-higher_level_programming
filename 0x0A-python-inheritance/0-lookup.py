@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-def print_list_integer(my_list=[]):
-    for i in my_list:
-        print(i)
+"""This module includes the lookup function"""
+
+
+def lookup(obj):
+	"""Returns a list of available attributes and methods"""
+	return dir(obj)
