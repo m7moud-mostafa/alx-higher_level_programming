@@ -1,7 +1,23 @@
 #!/usr/bin/python3
-def element_at(my_list, idx):
-    if idx < 0:
-        return None
-    if idx > len(my_list) - 1:
-        return None
-    return my_list[idx]
+"""This module contains the Mylist class"""
+
+
+class MyList(list):
+	"""A class that inherits the list class"""
+
+	def print_sorted(self):
+		"""prints the list sorted"""
+		self.l = self.copy()
+		self.l.sort()
+		print(self.l)
+
+
+my_list = MyList()
+my_list.append(1)
+my_list.append(4)
+my_list.append(2)
+my_list.append(3)
+my_list.append(5)
+print(my_list)
+my_list.print_sorted()
+print(my_list)
