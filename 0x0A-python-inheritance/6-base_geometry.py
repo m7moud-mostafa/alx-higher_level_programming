@@ -1,15 +1,10 @@
 #!/usr/bin/python3
-"""
-This module contains many functions
-"""
+"""This module contains the BaseGeometry class"""
 
 
 class BaseGeometry:
-    """
-    Class BaseGeometry with public instance method.
-    """
+    """BaseGeometry Class"""
+
     def area(self):
-        """
-        Raises an Exception with the message.
-        """
+        """Calculates the area"""
         raise Exception("area() is not implemented")
