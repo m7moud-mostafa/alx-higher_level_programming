@@ -29,7 +29,7 @@ class Base:
         """saves json into file"""
         if list_objs:
             with open("{}.json".format(cls.__name__), "w") as f:
-                      json.dump(list_objs, f)
+                      f.write(cls.to_json_string(list_objs))
 
 
 if __name__ == "__main__":
