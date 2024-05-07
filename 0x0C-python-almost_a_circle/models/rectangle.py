@@ -17,7 +17,7 @@ class Rectangle(Base):
     @staticmethod
     def __integer_validator(name, value, equalZero=False):
         """Validates if the value is not integer or less then 0"""
-        if not isinstance(value, (int, float)):
+        if not isinstance(value, (int)):
             raise TypeError("{} must be an integer".format(name))
 
         if equalZero:
