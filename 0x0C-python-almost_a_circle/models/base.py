@@ -38,12 +38,14 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
+        """from json to string"""
         if json_string is None or json_string == "":
             return []
         return json.loads(json_string)
 
     @classmethod
     def create(cls, **dictionary):
+        """creates a new class"""
         if cls.__name__ == "Rectangle":
             dummy_instance = cls(1, 1)
         elif cls.__name__ == "Square":
@@ -51,6 +53,7 @@ class Base:
 
         dummy_instance.update(**dictionary)
         return dummy_instance
+
 
 if __name__ == "__main__":
 
