@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This module contains the rectangle class"""
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -82,15 +82,15 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns a description """
-        return ("({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
-                                            self.width, self.height))
+        return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
+                                                 self.id, self.x, self.y,
+                                                 self.width, self.height))
 
 
 if __name__ == "__main__":
-    r1 = Rectangle(4, 6)
-    r1.display()
 
-    print("---")
+    r1 = Rectangle(4, 6, 2, 1, 12)
+    print(r1)
 
-    r1 = Rectangle(2, 2)
-    r1.display()
+    r2 = Rectangle(5, 5, 1)
+    print(r2)
