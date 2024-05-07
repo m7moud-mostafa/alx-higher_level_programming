@@ -3,18 +3,19 @@
 
 
 class Base:
-	"""The Base Class"""
+    """The Base Class"""
 
-	__nb_objects = 0
+    __nb_objects = 0
 
-	def __init__(self, id=None):
-		"""Initializes the Base class"""
-		if id is not None:
-			self.id = id
-		else:
-			Base.__nb_objects += 1
-			self.id = Base.__nb_objects
-	
+    def __init__(self, id=None):
+        """Initializes the Base class"""
+        if id is not None:
+            self.id = id
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
+
+
 if __name__ == "__main__":
 
     b1 = Base()
