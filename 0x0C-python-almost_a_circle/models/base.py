@@ -24,6 +24,13 @@ class Base:
         else:
             return json.dumps([])
 
+    @classmethod
+    def save_to_file(cls, list_objs):
+        """saves json into file"""
+        if list_objs:
+            with open("{}.json".format(cls.__name__), "w") as f:
+                      json.dump(list_objs, f)
+
 
 if __name__ == "__main__":
 
