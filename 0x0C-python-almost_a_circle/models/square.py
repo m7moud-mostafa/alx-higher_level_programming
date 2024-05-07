@@ -9,7 +9,18 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """Initializing the Square class"""
         super().__init__(size, size, x, y, id)
-        self.size = self.height
+        self.size = size
+
+    @property
+    def size(self):
+        """getter for size"""
+        return self.__size
+
+    @size.setter
+    def size(self, value):
+        """setter for size"""
+        self.__integer_validator("size", value)
+        self.__size = value
 
 
 if __name__ == "__main__":
