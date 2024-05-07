@@ -86,12 +86,12 @@ class Rectangle(Base):
         """returns a description """
         if self.__class__.__name__ == "Square":
             return ("[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
-                                                    self.id, self.x, self.y,
-                                                    self.width))
+                                                  self.id, self.x, self.y,
+                                                  self.width))
         else:
             return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
-                                                    self.id, self.x, self.y,
-                                                    self.width, self.height))
+                                                     self.id, self.x, self.y,
+                                                     self.width, self.height))
 
     def update(self, *args, **kwargs):
         """updates the attributes"""
@@ -103,6 +103,16 @@ class Rectangle(Base):
         elif kwargs:
             for attr, value in kwargs.items():
                 setattr(self, attr, value)
+
+    def to_dictionary(self):
+        """dict representation of the class"""
+        return {
+            "id": self.id,
+            "width": self.width,
+            "height": self.height,
+            "x": self.x,
+            "y": self.y
+            }
 
 
 if __name__ == "__main__":
