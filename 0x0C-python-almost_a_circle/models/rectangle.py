@@ -73,29 +73,19 @@ class Rectangle(Base):
 
     def area(self):
         """Returns the area of the Rectangle"""
-        return self.__height * self.width
+        return self.height * self.width
+
+    def display(self):
+        """prints the rectangle"""
+        for i in range(self.height):
+            print("#" * self.width)
 
 
 if __name__ == "__main__":
+    r1 = Rectangle(4, 6)
+    r1.display()
 
-    try:
-        Rectangle(10, "2")
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+    print("---")
 
-    try:
-        r = Rectangle(10, 2)
-        r.width = -10
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-
-    try:
-        r = Rectangle(10, 2)
-        r.x = {}
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
-
-    try:
-        Rectangle(10, 2, 3, -1)
-    except Exception as e:
-        print("[{}] {}".format(e.__class__.__name__, e))
+    r1 = Rectangle(2, 2)
+    r1.display()
