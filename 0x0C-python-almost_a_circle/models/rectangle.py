@@ -82,7 +82,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns a description """
-        return ("({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
+        return ("({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
+                                            self.width, self.height))
 
 
 if __name__ == "__main__":
