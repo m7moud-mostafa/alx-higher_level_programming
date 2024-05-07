@@ -54,6 +54,20 @@ class Base:
         dummy_instance.update(**dictionary)
         return dummy_instance
 
+    @classmethod
+    def load_from_file(cls):
+        """Creates objects from file"""
+        try:
+            with open("{}.json".format(cls.__name__),
+                      "r", encoding="utf-8") as f:
+                json_str = f.read()
+                dicts = cls.from_json_string(json_str)
+                objects = []
+                for dicti in dicts:
+                    objects.append(cls.create(**dicti))
+        except FileNotFoundError:
+            return []
+
 
 if __name__ == "__main__":
 
