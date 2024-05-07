@@ -56,15 +56,13 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """Creates objects from file"""
+        filename = cls.__name__ + ".json"
         try:
-            with open("{}.json".format(cls.__name__),
-                      "r", encoding="utf-8") as f:
-                json_str = f.read()
+            with open(filename, "r") as file:
+                json_str = file.read()
                 dicts = cls.from_json_string(json_str)
-                objects = []
-                for dicti in dicts:
-                    objects.append(cls.create(**dicti))
+                instances = [cls.create(**d) for d in dicts]
+                return instances
         except FileNotFoundError:
             return []
 
