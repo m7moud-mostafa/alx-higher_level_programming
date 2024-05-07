@@ -56,6 +56,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        """creates a class from a file"""
         filename = cls.__name__ + ".json"
         try:
             with open(filename, "r") as file:
@@ -65,6 +66,7 @@ class Base:
                 return instances
         except FileNotFoundError:
             return []
+
 
 
 if __name__ == "__main__":
