@@ -84,9 +84,14 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns a description """
-        return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
-                                                 self.id, self.x, self.y,
-                                                 self.width, self.height))
+        if self.__class__.__name__ == "Square":
+            return ("[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
+                                                    self.id, self.x, self.y,
+                                                    self.width))
+        else:
+            return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
+                                                    self.id, self.x, self.y,
+                                                    self.width, self.height))
 
     def update(self, *args, **kwargs):
         """updates the attributes"""
