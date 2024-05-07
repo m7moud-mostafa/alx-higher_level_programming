@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This module contains the rectangle class"""
-from models.base import Base
+from base import Base
 
 
 class Rectangle(Base):
@@ -88,19 +88,16 @@ class Rectangle(Base):
                                                  self.id, self.x, self.y,
                                                  self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """updates the attributes"""
-        length = len(args)
-        if length >= 1:
-            self.id = args[0]
-        if length >= 2:
-            self.width = args[1]
-        if length >= 3:
-            self.height = args[2]
-        if length >= 4:
-            self.x = args[3]
-        if length >= 5:
-            self.y = args[4]
+        list_of_attr = ["id", "width", "height", "x", "y"]
+
+        if args:
+            for i, arg in enumerate(args):
+                setattr(self, list_of_attr[i], arg)
+        elif kwargs:
+            for attr, value in kwargs.items():
+                setattr(self, attr, value)
 
 
 if __name__ == "__main__":
@@ -108,17 +105,14 @@ if __name__ == "__main__":
     r1 = Rectangle(10, 10, 10, 10)
     print(r1)
 
-    r1.update(89)
+    r1.update(height=1)
     print(r1)
 
-    r1.update(89, 2)
+    r1.update(width=1, x=2)
     print(r1)
 
-    r1.update(89, 2, 3)
+    r1.update(y=1, width=2, x=3, id=89)
     print(r1)
 
-    r1.update(89, 2, 3, 4)
-    print(r1)
-
-    r1.update(89, 2, 3, 4, 5)
+    r1.update(x=1, height=2, y=3, width=4)
     print(r1)
