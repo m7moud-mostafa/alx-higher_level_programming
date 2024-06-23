@@ -1,2 +1,2 @@
 -- 10-top_score.sql
-SELECT score name from second_table;
+SELECT score name FROM second_table;
