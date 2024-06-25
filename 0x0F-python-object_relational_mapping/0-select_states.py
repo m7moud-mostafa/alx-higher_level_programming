@@ -3,24 +3,24 @@
 
 
 if __name__ == "__main__":
-	import MySQLdb as sql
-	import sys
+    import MySQLdb as sql
+    import sys
 
 
-	db = sql._mysql.connect(
-							username=sys.argv[1],
-						 	password=sys.argv[2],
-							database=sys.argv[3],
-							port=3306,
-							host= "localhost"
-							)
+    db = sql.connect(
+        host="localhost",
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3],
+        port=3306
+    )
 
-	cur = db.curser()
-	rows = cur.execute("SELECT * FROM states ORDER BY id ASC")
-	rows.fetchall()
+    cur = db.cursor()
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+    rows = cur.fetchall()
 
-	for row in rows:
-		print(row)
+    for row in rows:
+        print(row)
 
-	cur.close()
-	db.close()
+    cur.close()
+    db.close()
