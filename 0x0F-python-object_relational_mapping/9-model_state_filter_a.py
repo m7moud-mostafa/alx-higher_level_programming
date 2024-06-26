@@ -23,7 +23,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(State.name.like("%a%")).order_by(State.id)
+    state = session.query(State).filter(or_(State.name.like("%a%"),State.name.like("%A%"))).order_by(State.id)
 
     if state:
         print("{}: {}".format(state.id, state.name))
