@@ -18,7 +18,7 @@ class State(Base):
 
 
 if __name__ == "__main__":
-     
+
     if len(sys.argv) != 4:
         print("Usage: ./model_state.py <mysql_username> \
               <mysql_password> <database_name>")
