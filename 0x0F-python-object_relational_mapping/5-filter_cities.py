@@ -24,8 +24,10 @@ if __name__ == "__main__":
     cur.execute(query)
     rows = cur.fetchall()
 
-    for row in rows:
-        print(row)
-
+    string =""
+    n_rows = len(rows)
+    cities = [row[1] for row in rows]
+    formatted_cities = ", ".join(cities)
+    print(formatted_cities)
     cur.close()
     db.close()
