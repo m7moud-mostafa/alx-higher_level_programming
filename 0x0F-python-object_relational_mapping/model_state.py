@@ -18,6 +18,12 @@ class State(Base):
 
 
 if __name__ == "__main__":
+     
+    if len(sys.argv) != 4:
+        print("Usage: ./model_state.py <mysql_username> \
+              <mysql_password> <database_name>")
+        sys.exit(1)
+
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
                            .format(sys.argv[1], sys.argv[2],
                                    sys.argv[3]), pool_pre_ping=True)
