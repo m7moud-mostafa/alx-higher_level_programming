@@ -24,7 +24,7 @@ if __name__ == "__main__":
     cur.execute(query)
     rows = cur.fetchall()
 
-    string =""
+    string = ""
     n_rows = len(rows)
     cities = [row[1] for row in rows]
     formatted_cities = ", ".join(cities)
