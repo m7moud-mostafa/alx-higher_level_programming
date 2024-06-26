@@ -5,7 +5,7 @@ from the database hbtn_0e_6_usa
 """
 import sys
 from model_state import State, Base
-from sqlalchemy import create_engine
+from sqlalchemy import create_engine, or_
 from sqlalchemy.orm import sessionmaker
 
 
@@ -23,9 +23,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    state = session.query(State).filter(or_(State.name.like("%a%"),State.name.like("%A%"))).order_by(State.id)
+    states = session.query(State)\
+        .filter(or_(State.name.like("%a%"), State.name.like("%A%")))\
+        .order_by(State.id)
 
-    if state:
+    for state in states:
         print("{}: {}".format(state.id, state.name))
-    else:
-        print("Nothing")
