@@ -25,10 +25,9 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State)\
-        .filter(State.name == name).order_by(State.id)
+        .filter(State.name == name).order_by(State.id).first()
 
     if states:
-        for state in states:
-            print(state.id)
+        print(states.id)
     else:
         print("Not found")
