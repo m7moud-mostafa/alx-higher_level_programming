@@ -10,7 +10,8 @@ from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        print("Usage: ./13-model_state_delete_a.py <mysql_username> <mysql_password> <database_name>")
+        print("Usage: ./13-model_state_delete_a.py\
+               <mysql_username> <mysql_password> <database_name>")
         sys.exit(1)
 
     mysql_username = sys.argv[1]
