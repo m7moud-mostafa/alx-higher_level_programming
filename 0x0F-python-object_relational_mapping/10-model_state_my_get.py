@@ -27,5 +27,8 @@ if __name__ == "__main__":
     states = session.query(State)\
         .filter(State.name == name).order_by(State.id)
 
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    if states:
+        for state in states:
+            print("{}: {}".format(state.id, state.name))
+    else:
+        print("Not found")
